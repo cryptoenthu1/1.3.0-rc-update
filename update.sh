@@ -32,6 +32,3 @@ sudo docker run -d \
   keepnetwork/keep-ecdsa-client:v1.2.0-rc \
   --config /mnt/keep-ecdsa/config/config.toml start
 sleep 2
-sudo docker logs --tail 1000 keep-client -f|grep 'number of connected peers:'
-sleep 20
-sudo docker logs ecdsa 2>&1 --since 5m | grep "number of connected peers"

@@ -16,7 +16,7 @@ sudo docker run -dit \
 --restart always \
 --volume $HOME/keep-client:/mnt \
 --env KEEP_ETHEREUM_PASSWORD=$KEEP_CLIENT_ETHEREUM_PASSWORD \
---env LOG_LEVEL=debug \
+--env LOG_LEVEL=info \
 --name keep-client \
 -p 3919:3919 \
 keepnetwork/keep-client:v1.3.0-rc --config /mnt/config/config.toml start
@@ -26,7 +26,7 @@ sudo docker run -d \
   --entrypoint /usr/local/bin/keep-ecdsa \
   --volume $HOME/keep-ecdsa:/mnt/keep-ecdsa \
   --env KEEP_ETHEREUM_PASSWORD=$KEEP_CLIENT_ETHEREUM_PASSWORD \
-  --env LOG_LEVEL=debug \
+  --env LOG_LEVEL=info \
   --name ecdsa \
   -p 3920:3919 \
   keepnetwork/keep-ecdsa-client:v1.2.0-rc \
